@@ -22,4 +22,4 @@ Steps
 . Go to this https://go.microsoft.com/fwlink/p/?LinkID=403811[site]  to start your trial subscription.
 . Follow the on-screen instructions to complete the sign-up process.
 . Download and install Microsoft Office 365.
-  You can add up to 25 users to your free trial. 
+  You can add up to 25 users to your free trial.
