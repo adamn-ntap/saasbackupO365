@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>NetApp SaaS Backup for Office 365 Overview | NetApp Cloud Docs</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="NetApp SaaS Backup for Office 365 Overview | NetApp Cloud Docs">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://docs.netapp.com/saasbackupO365/ja-jp/concept_overview.html">
+	<meta property="og:description" content="NetApp SaaS Backup for Office 365 is a secure, web-based, software-as-a-service (SaaS) offering that backs up your Microsoft Office 365 data to Amazon S3 sto...">
+  <meta property="og:image" content="https://docs.netapp.com/saasbackupO365/ja-jp/images/logo-tophat-social.png">
+  <meta property="og:image:alt" content="NetApp Logo">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation">
+  <meta http-equiv="nss-subtype" content="User Guide">
+  
+  <meta name="description" content="NetApp SaaS Backup for Office 365 is a secure, web-based, software-as-a-service (SaaS) offering that backs up your Microsoft Office 365 data to Amazon S3 sto...">
+  <meta name="keywords" content=" overview, concepts, features, use case">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/saasbackupO365/ja-jp/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/saasbackupO365/ja-jp/feed.xml">
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/saasbackupO365/ja-jp/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/saasbackupO365/ja-jp/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/saasbackupO365/ja-jp/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/saasbackupO365/ja-jp/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/www-netapp-library-critical.min.css" media="all">
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/na-utility.css" type="text/css">
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/na-sidebar.css" type="text/css">
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/clouddocs.css" type="text/css">
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/na-pagenav.css" type="text/css">
+
+  
+
+  
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/na-feature.css" type="text/css">
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src="/saasbackupO365/ja-jp/js/na-search.js"></script>
+  
+
+  
+  <script src="/saasbackupO365/ja-jp/js/na-pagenav.js"></script>
+  
+
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/prism.css" type="text/css">
+  <link rel="stylesheet" href="/saasbackupO365/ja-jp/css/prism-netapp.css" type="text/css">
+
+
+<script src="/saasbackupO365/ja-jp/js/na-utility.js"></script>
+  <script src="/saasbackupO365/ja-jp/js/clouddocs.js"></script>
+  
+  <script src="//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js" async></script>
+  
+
+  <script src="/saasbackupO365/ja-jp/js/jquery.navgoco.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="/saasbackupO365/ja-jp/js/toc.js"></script>
+  <script src="/saasbackupO365/ja-jp/js/customscripts.js"></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+
+  <!-- Controls the i18n Browser Redirection -->
+  <script>
+    
+    var siteLocales = [];
+    
+      siteLocales.push("us-en");
+    
+      siteLocales.push("ja-jp");
+    
+
+    standardizeUrl(siteLocales, "clouddocs.netapp.com", "https://docs.netapp.com");
+    
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Product and Solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support and Training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search"></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+        <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-property-bar__toolbar">
+<div id="ie-i18n-tooltip" class="luci-tooltip luci-tooltip--right-bottom">
+        <div class="luci-tooltip__trigger" aria-describedby="luci-tooltip-1">
+          <svg class="luci-icon" aria-hidden="true">
+            <use xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#circle-info">
+            </use>
+          </svg>
+        </div>
+        <div class="luci-tooltip__content" role="tooltip" id="luci-tooltip-1">
+          <div class="luci-tooltip__content-inner">
+            <div id="nmt-disclaimer" class="luci-tooltip__text"> NetAppは、業界をリードするニューラル機械翻訳ツールを利用して、このコンテンツを提供しています。 </div>
+          </div>
+        </div>
+      </div>
+<!-- Start Language Selector -->
+      <div id="ie-i18n" class="n-property-bar__lang-selector">
+        <div id="ie-i18n-menu">
+        <span class="ie-i18n-lang">日本語</span>
+          <button class="ie-i18n-icon-container" type="button">
+            <svg class="n-globe__icon" aria-labelledby="title">
+              <title>globe</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#globe"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+          <div class="n-language-selector-menu">
+            <div class="n-language-selector-menu__header">
+              <span class="n-language-selector-menu__title">Select Your Language</span>
+            </div>
+            <ul class="n-menu__list">
+              <li class="n-menu__list-column">
+                <ul class="n-menu__list">
+                  
+                  
+                  
+                  
+                  <li class="n-menu__list-item n-menu__list-item--level-1">
+                    <a href="/saasbackupO365/us-en/" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  </li>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <li class="n-menu__list-item n-menu__list-item--level-1">
+                    <a href="/saasbackupO365/ja-jp/" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  </li>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </ul>
+              </li>
+            </ul>
+            <div class="menu__footer">
+              <p>Current Language: 日本語
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Language Selector -->
+
+      <div class="n-property-bar__cta"></div>
+    </div>
+
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/ja-jp/cloud/">Cloud Docs</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/saasbackupO365/ja-jp/">SaaS Backup For Office 365</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          NetApp SaaS Backup for Office 365 Overview
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div>
+<!-- Main needs to have height -->
+  </div>
+</div>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    Download PDF
+    <span>
+      <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+    </span>
+  </a>
+</div>
+<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;">
+<div class="n-pdf-section">
+      <span class="n-pdf-section-title">
+        Site
+      </span>
+    </div>
+    <li>
+      <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/fullsite-sidebar/NetApp_SaaS_Backup_for_Office_____documentation.pdf">
+        <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+        NetApp SaaS Backup for Office 365 documentation
+      </a>
+    </li>
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            リリースノート
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%82%B3%E3%83%B3%E3%82%BB%E3%83%97%E3%83%88.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            コンセプト
+          </a>
+        </li>
+        <span>
+          
+  
+    <div class="n-pdf-section">
+  <span class="n-pdf-section-title">
+    This page
+  </span>
+</div>
+
+<li class="active">
+  <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/pages/concept_overview.pdf">
+    <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+    NetApp SaaS Backup for Office 365 Overview
+  </a>
+</li>
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E5%85%A5%E9%96%80.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            入門
+          </a>
+        </li>
+        <span>
+          
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E7%84%A1%E6%96%99%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            無料トライアルを始める
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%82%B5%E3%83%96%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            トライアルサブスクリプションからのアップグレード
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E6%9C%89%E6%96%99%E3%82%B5%E3%83%96%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E5%85%A5%E9%96%80.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            有料サブスクリプション入門
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/SaaS%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%81%AE%E7%AE%A1%E7%90%86.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            SaaSバックアップの管理
+          </a>
+        </li>
+        <span>
+          
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%81%AE%E7%AE%A1%E7%90%86.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            バックアップの管理
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E5%BE%A9%E5%85%83%E3%81%AE%E7%AE%A1%E7%90%86.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            復元の管理
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%81%8D%E3%82%81%E7%B4%B0%E3%81%8B%E3%81%84%E3%83%AC%E3%83%99%E3%83%AB%E3%81%AE%E5%BE%A9%E5%85%83%E3%81%AE%E5%AE%9F%E8%A1%8C.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            きめ細かいレベルの復元の実行
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E6%A8%A9%E9%99%90%E3%81%AE%E7%AE%A1%E7%90%86.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            権限の管理
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AE%E7%AE%A1%E7%90%86.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            ライセンスの管理
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%83%AB%E3%83%BC%E3%83%AB%E3%81%AE%E7%AE%A1%E7%90%86.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            ルールの管理
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E7%AE%A1%E7%90%86.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            サービスの管理
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AE%E7%AE%A1%E7%90%86.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            ロールベースのアカウントアクセスの管理
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E7%AE%A1%E7%90%86.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            セキュリティグループの管理
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/saasbackupO365/ja-jp/pdfs/sidebar/%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%A1%A8%E7%A4%BA.pdf">
+            <img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">
+            データの表示
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+</ul>
+
+<script>
+  $("#toggleContainerPdf li.active").parents('li').toggle('display');
+  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+  });
+</script><ul id="mysidebar" class="nav">
+<li class=" "><a class="na-navbar-padding" href="index.html">
+        NetApp SaaS Backup for Office 365
+      </a></li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> リリースノート</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="reference_new_saasbackupO365.html">
+        新着情報
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="reference_new_archived.html">
+        新しいアーカイブとは
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="reference_kpls.html">
+        既知の問題と制限
+      </a></li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> コンセプト</div>
+      </a>
+      <ul>
+<li class="  active "><a class="na-navbar-padding" href="concept_overview.html">
+        概要概要
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="concept_storage_types.html">
+        SaaSバックアップで使用できるストレージタイプ
+      </a></li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> 入門</div>
+      </a>
+      <ul>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> 無料トライアルを始める</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="concept_free_trial_workflow.html">
+        ワークフロー
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="concept_free_trial_restrictions.html">
+        無料トライアルの制限
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_registering_for_free_trial_activation_code.html">
+        無料トライアルアクティベーションコードの登録
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_signing_up_for_o365_free_trial.html">
+        Microsoft Office365無料トライアルアカウントにサインアップする
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_creating_msservice_account_with_global_permissions.html">
+        グローバル権限を持つMSOfficeサービスアカウントの作成
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_configuring_impersonation.html">
+        Microsoft ExchangeOnlineの偽装の構成
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_signing_up_for_saasbkup_free_trial.html">
+        SaaS Backup for Office365の無料トライアルにサインアップする
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_scheduling_first_backup.html">
+        最初のバックアップのスケジュール
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_performing_immediate_backup_of_policy.html">
+        即時バックアップの実行
+      </a></li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> トライアルサブスクリプションからのアップグレード</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="task_upgrading_from_trial.html">
+        アップグレード
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_activate_support.html">
+        アップグレード後にサポートを有効にする
+      </a></li>
+</ul>
+</li>
+<li class=" "><a class="na-navbar-padding" href="reference_free_trial_data.html">
+        無料トライアルデータの削除
+      </a></li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> 有料サブスクリプション入門</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="concept_paid_subscription_workflow.html">
+        ワークフロー
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_creating_msservice_account_with_global_permissions.html">
+        グローバル権限を持つMSOfficeサービスアカウントの作成
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_configuring_impersonation.html">
+        Microsoft ExchangeOnlineの偽装の構成
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_signing_up_for_saasbkup_paid_subscription.html">
+        SaaS Backup for Office365の有料サブスクリプションにサインアップする
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_scheduling_first_backup.html">
+        最初のバックアップのスケジュール
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_performing_immediate_backup_of_policy.html">
+        即時バックアップの実行
+      </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> SaaSバックアップの管理</div>
+      </a>
+      <ul>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> バックアップの管理</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="concept_backup_policies.html">
+        バックアップポリシー
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="concept_backup_settings.html">
+        バックアップ設定
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_scheduling_backup_or_changing_frequency.html">
+        バックアップのスケジュールまたはバックアップ頻度の変更
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_performing_immediate_backup_of_service.html">
+        即時バックアップの実行
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_browsing_backups.html">
+        バックアップの閲覧
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_updating_backup_retention_period.html">
+        バックアップ保存期間の更新
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_enabling_onenote_backups.html">
+        OneNoteのバックアップを有効にする
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_updating_backup_settings.html">
+        バックアップ設定の更新
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="concept_supported_templates_and_apps.html">
+        Microsoft SharePointOnlineでのバックアップがサポートされているテンプレートとアプリ
+      </a></li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> 復元の管理</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="task_performing_high_level_restore.html">
+        高レベルの復元の実行
+      </a></li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> きめ細かいレベルの復元の実行</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="task_performing_granular_level_restore_exchange.html">
+        交換用
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_performing_granular_level_restore_sharepoint.html">
+        SharePointの場合
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_performing_granular_level_restore_onedrive.html">
+        OneDriveの場合
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_performing_granular_level_restore_teams.html">
+        TeamsChatの場合
+      </a></li>
+</ul>
+</li>
+<li class=" "><a class="na-navbar-padding" href="task_restoring_from_previous_backup.html">
+        以前のバックアップからの復元
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_viewing_restore_file_locations.html">
+        復元されたファイルの検索
+      </a></li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> 権限の管理</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="task_adding_permissions_to_service_accounts.html">
+        サービスアカウントへのアクセス許可の追加
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_syncing_user_permissions_with_azure.html">
+        ユーザー権限をAzureActiveDirectoryと同期する
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_granting_permissions_to_enable_shared_mailboxes.html">
+        共有メールボックスを有効にするためのアクセス許可を付与する
+      </a></li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> ライセンスの管理</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="task_adding_a_license.html">
+        ライセンスの追加
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_updating_subscription_information.html">
+        サブスクリプション情報の更新
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_releasing_a_user_license.html">
+        ユーザーライセンスのリリース
+      </a></li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> ルールの管理</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="task_creating_rules.html">
+        新しいルールの作成
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_applying_rules.html">
+        既存のルールを適用する
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_deleting_rules.html">
+        ルールの削除
+      </a></li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> サービスの管理</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="task_activating_a_service.html">
+        サービスのアクティブ化
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_deactivating_a_service.html">
+        サービスの非アクティブ化
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_activate_support.html">
+        サポートを有効にする
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_canceling_job.html">
+        ジョブのキャンセル
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_setting_account_notifications.html">
+        通知の設定
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_discovering_new.html">
+        新しいメールボックス、サイト、およびグループの検出
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_purging.html">
+        ユーザー、サイトコレクション、またはOffice365グループの削除
+      </a></li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> ロールベースのアカウントアクセスの管理</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="task_assigning_admin_roles_to_user_accounts.html">
+        ユーザーアカウントへの管理者の役割の割り当て
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_updating_admin_roles_assigned_to_user_accounts.html">
+        ユーザーアカウントに割り当てられた管理者の役割を更新する
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_deleting_admin_roles_from_a_user_account.html">
+        ユーザーアカウントからすべての管理者の役割を削除する
+      </a></li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> セキュリティグループの管理</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="task_adding_security_groups.html">
+        セキュリティグループの追加
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_deleting_security_groups.html">
+        セキュリティグループの削除
+      </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="subfolders ">
+<a href="#">
+        <div class="na-navbar-padding"> データの表示</div>
+      </a>
+      <ul>
+<li class=" "><a class="na-navbar-padding" href="task_creating_user_defined_filter.html">
+        ユーザー定義フィルターの作成
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_performing_search.html">
+        検索の実行
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_viewing_history_and_activity.html">
+        ジョブ履歴とアクティビティログの表示
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_viewing_deprovisioned.html">
+        プロビジョニング解除されたアイテムの表示
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_viewing_purged.html">
+        パージされたデータの表示
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_viewing_deleted.html">
+        削除されたアイテムの表示
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="task_downloading_data.html">
+        データのダウンロード
+      </a></li>
+</ul>
+</li>
+<li class=" "><a class="na-navbar-padding" href="task_providing_feedback.html">
+        フィードバックの提供
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="concept_get_help_find_info.html">
+        ヘルプを入手して詳細情報を見つける場所
+      </a></li>
+<li class=" "><a class="na-navbar-padding" href="reference_legal_notices.html">
+        法的通知
+      </a></li>
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content"><div class="n-doc__component-detail-heading-wrap"><h1 class="n-doc__component-detail-heading"> NetApp SaaS Backup for Office365の概要</h1></div>
+<p class="page-details"><time datetime="2020-10-21 19:32:20 +0000">2020年10月21日</time><span>寄稿者<a target="_blank" href="https://github.com/netapp-aherbin"><img class="avatar avatar-small" alt="netapp-aherbin" width="20" height="20" src="https://avatars0.githubusercontent.com/u/38955266?v=4" style="border-radius: 50%;"></a> <a target="_blank" href="https://github.com/akseldavis"><img class="avatar avatar-small" alt="akseldavis" width="20" height="20" src="https://avatars2.githubusercontent.com/u/33839009?v=4" style="border-radius: 50%;"></a> <a target="_blank" href="https://github.com/netapp-rlithman"><img class="avatar avatar-small" alt="netapp-rlithman" width="20" height="20" src="https://avatars2.githubusercontent.com/u/54725121?v=4" style="border-radius: 50%;"></a></span><span><a target="_blank" href="/saasbackupO365/ja-jp/pdfs/pages/concept_overview.pdf" role="button"><img src="/saasbackupO365/ja-jp/images/pdf.png" width="20" height="20">このページのPDFをダウンロード</a></span></p>
+<div class="paragraph lead"><p>NetApp SaaS Backup for Office 365は、Microsoft Office365データをAmazonS3ストレージまたはMicrosoftAzure Blobストレージにバックアップする、安全なWebベースのサービスとしてのソフトウェア（SaaS）オファリングです。 SaaSバックアップは、保存中および飛行中のデータの暗号化を提供します。</p></div>
+<div class="paragraph"><p> <span class="image"><img src="./media/workflow_overview.gif" alt="SaaS Backup for Office 365のバックアップと、Office365から使用可能なストレージオプションへの復元のグラフィカルな概要。"></span></p></div>
+<div class="paragraph"><p> SaaS Backup for Salesforceに興味がある場合は、<a href="https://docs.netapp.com/us-en/salesforce/">ここに</a>ドキュメントがあり<a href="https://docs.netapp.com/us-en/salesforce/">ます</a>。</p></div></article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div class="page-nav-contribute">
+      <div class="page-nav-contribute-title">CONTRIBUTE</div>
+      <a target="_blank" href="https://github.com/NetAppDocs/saasbackupO365/blob/master/concept_overview.adoc" class="btn btn-default githubEditButton" role="button"><img src="/saasbackupO365/ja-jp/images/github.png" class="github-icon"> Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/saasbackupO365/issues/new?body=Page%3A%20%5BNetApp%20SaaS%20Backup%20for%20Office%20365%20Overview%5D(https://docs.netapp.com/ja-jp/saasbackupO365/concept_overview.html)" class="btn btn-default githubEditButton" role="button"><img src="/saasbackupO365/ja-jp/images/github.png" class="github-icon"> Request doc changes</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link">Contributor's Guide</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">ON THIS PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div>
+<!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2020 NetApp</a>
+            </li>
+            <li class="n-footer__language">
+              <!-- <a class="n-footer__corp-link modaal" href="#n-language-selector-menu" data-modaal-scope="modaal_154143812867626e487b1a03c9"> -->
+              <a class="n-footer__corp-link modaal" href="#n-language-selector-menu">
+                <svg class="n-icon-baseline-language" aria-labelledby="title">
+                  <title>netapp-globe</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#globe"></use>
+                </svg>
+                English
+              </a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/saasbackupO365/ja-jp/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">
+
+
+  Have feedback for our website?
+
+  <a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
+  <a href="https://docs.netapp.com/ja-jp/announcements/" class="n-footer__copyright">Announcements</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src="/saasbackupO365/ja-jp/js/bundle.js"></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src="/saasbackupO365/ja-jp/js/prism.js"></script>
+      <script type="text/javascript" src="/saasbackupO365/ja-jp/js/prism-curl.js"></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src="/saasbackupO365/ja-jp/js/www-ntap.js"></script>
+  </body>
+
+  
+</html>

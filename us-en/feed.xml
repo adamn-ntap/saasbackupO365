@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>saasbackupO365 | NetApp Cloud Docs</title>
+    <atom:link href="https://docs.netapp.com/saasbackupO365/us-en/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://docs.netapp.com/saasbackupO365/us-en</link>
+    <description>The latest updates from NetApp Cloud Docs</description>
+    <language>en-us</language>
+    <ttl>60</ttl>
+    <pubDate>Thu, 19 Nov 2020 19:45:06 +0000</pubDate>
+    <lastBuildDate>Thu, 19 Nov 2020 19:45:06 +0000</lastBuildDate>
+    
+    
+    
+    <item>
+      <title>New features and updates (21 Oct 2020)</title>
+      <pubDate>Wed, 21 Oct 2020 19:32:20 +0000</pubDate>
+      <link>https://docs.netapp.com/us-en/saasbackupO365/reference_new_saasbackupO365.html?time=1603308740</link>
+      <guid isPermaLink="false">Wed, 21 Oct 2020 19:32:20 +0000</guid>
+      <description><![CDATA[ SaaS Backup for Office 365 regularly introduces a new release to bring you new features, enhancements, and bug fixes. ]]></description>
+    </item>
+    
+    
+  </channel>
+</rss>
